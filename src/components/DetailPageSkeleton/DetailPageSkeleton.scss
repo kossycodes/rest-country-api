@@ -1,0 +1,105 @@
+@use './../../styles/variable';
+@use './../../styles/mixin';
+
+.detail-skeleton {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 30px;
+    padding-bottom: 100px;
+    row-gap: 50px;
+    max-width: variable.$breakpoint-desktop;
+    margin: auto;
+    @include mixin.skeletonAnimation();
+
+    &__back {
+        background-color: var(--elements);
+        box-shadow: variable.$shadow-2;
+        border-radius: variable.$rounded-1;
+        padding: 10px 25px;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        &-icon {
+            width: 24px;
+            height: 24px;
+            fill: var(--text);
+        }
+
+        &-text {
+            color: var(--text);
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 50px;
+        column-gap: 80px;
+    }
+
+    &__flag {
+        width: 100%;
+        height: 400px;
+        background-color: var(--elements);
+    }
+
+    &__description {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    &__borders {
+        width: 300px;
+        height: 25px;
+        background-color: var(--elements);
+    }
+
+    &__name {
+        width: 200px;
+        height: 50px;
+        background-color: var(--elements);
+    }
+
+    &__info {
+        display: flex;
+        row-gap: 50px;
+        flex-direction: column;
+        width: 100%;
+        height: 200px;
+        background-color: var(--elements);
+    }
+}
+
+@media screen and (min-width: variable.$breakpoint-tablet) {
+    .detail-skeleton {
+        padding-inline: 100px;
+
+        &__body {
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        &__flag {
+            min-width: 20em;
+            max-width: 25em;
+            height: 15em;
+        }
+
+        &__description {
+            justify-content: space-between;
+            width: fit-content;
+        }
+
+        &__info {
+            min-width: 400px;
+        }
+    }
+}

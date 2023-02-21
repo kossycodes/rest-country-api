@@ -1,0 +1,47 @@
+@use './../../styles//variable.scss';
+
+.navbar {
+    width: 100%;
+    background-color: var(--elements);
+    box-shadow: variable.$shadow-1;
+    padding-inline: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0px;
+        max-width: variable.$breakpoint-desktop;
+        margin: auto;
+    }
+
+    &__title {
+        font-weight: variable.$weight-3;
+        color: var(--text);
+    }
+
+    &__toggle-theme {
+        all: unset;
+        cursor: pointer;
+        color: var(--text);
+        font-weight: variable.$weight-1;
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+    }
+
+    &__toggle-theme__icon {
+        width: 24px;
+        height: 24px;
+        fill: var(--text);
+    }
+}
+
+@media screen and (min-width: variable.$breakpoint-tablet) {
+    .navbar {
+        padding-inline: 100px;
+    }
+}

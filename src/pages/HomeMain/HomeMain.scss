@@ -1,0 +1,29 @@
+@use './../../styles/variable.scss';
+
+.home-main {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    row-gap: 60px;
+    max-width: variable.$breakpoint-desktop;
+    margin: auto;
+
+    &__action {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+}
+
+@media screen and (min-width: variable.$breakpoint-tablet) {
+    .home-main {
+        padding-inline: 100px;
+        
+        &__action {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 50px;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@use './../../styles/_variable.scss';
+
+.search-form {
+    padding: variable.$padding-1;
+    background-color: var(--elements);
+    box-shadow: variable.$shadow-1;
+    border-radius: variable.$rounded-1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 25px;
+    max-height: 74px;
+    min-width: 172px;
+    width: 100%;
+    position: relative;
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        fill: var(--text);
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__input {
+        font-family: variable.$font-family;
+        background-color: transparent;
+        color: var(--text);
+        outline: none;
+        font-weight: variable.$weight-1;
+        font-size: variable.$font-size-2;
+        border: none;
+        width: 100%;
+        text-overflow: ellipsis;
+    }
+
+    &__input::placeholder {
+        font-size: variable.$font-size-2;
+        color: var(--text);
+        text-overflow: ellipsis;
+    }
+
+    &__clear {
+        all: unset;
+        cursor: pointer;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        right: 35px;
+        fill: var(--text);
+    }
+}
+
+@media screen and (min-width: variable.$breakpoint-tablet) {
+    .search-form {
+        max-width: 450px;
+    }
+}

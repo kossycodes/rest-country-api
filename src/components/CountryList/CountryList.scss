@@ -1,0 +1,18 @@
+@use './../../styles/variable.scss';
+.country-list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+@media screen and (min-width: variable.$breakpoint-tablet) {
+    .country-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 80px;
+        justify-content: center;
+    }
+}

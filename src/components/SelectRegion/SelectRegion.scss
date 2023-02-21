@@ -1,0 +1,41 @@
+@use './../../styles/variable.scss';
+
+.select-region {
+    all: unset;
+    cursor: pointer;
+    background-color: var(--elements);
+    box-shadow: variable.$shadow-1;
+    border-radius: variable.$rounded-1;
+    display: flex;
+    min-width: 280px;
+    position: relative;
+    align-items: center;
+
+    &__selector {
+        all: unset;
+        padding-left: 25px;
+        height: 74px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        color: var(--text);
+    }
+
+    &__option {
+        color: var(--text);
+        background-color: var(--elements);
+    }
+
+    &:active &__icon {
+        transform: rotate(180deg);
+        transition: .3s;
+    }
+
+    &__icon {
+        position: absolute;
+        transition: .3s;
+        right: 25px;
+        pointer-events: none;
+        fill: var(--text);
+    }
+}
