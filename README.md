@@ -14,7 +14,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 ### Links
 
 
-- [Live preview](https://rest-countries-app-zaarza.vercel.app/)
+- [Live preview](https://countries-info-react.netlify.app)
 
 ## My process
 
